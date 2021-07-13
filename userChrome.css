@@ -1,39 +1,11 @@
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
-  #TabsToolbar
-  > .toolbar-items {
-  opacity: 0;
-  pointer-events: none;
+#main-window #TabsToolbar {
+  height: 35px !important;
+  overflow: hidden;
+  transition: height .3s .3s !important;
 }
-#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
-  visibility: collapse !important;
+#main-window[titlepreface*="[Sidebery]"] #TabsToolbar {
+  height: 0 !important;
 }
-
-/* Adding empty space for buttons */
-/* #nav-bar {
-	margin-right:140px;
-} */
-
-/* 1px for dragging whole window by mouse*/
-#titlebar {
-  appearance: none !important;
-  height: 1px;
-}
-
-/* Fix for main menu calling by Alt button */
-#titlebar > #toolbar-menubar {
-  margin-top: 1px;
-}
-
-/* Move minimize/restore/close buttons to empty space */
-/* #TabsToolbar > .titlebar-buttonbox-container {
-    visibility: collapse !important;
-	display: block;
-	position: absolute;
-	top: 17px;
-	right: 1px;
-} */
-
-/* Hide minimize/restore/close buttons */
-#TabsToolbar > .titlebar-buttonbox-container {
-  visibility: collapse !important;
+#main-window[titlepreface*="[Sidebery]"] #tabbrowser-tabs {
+  z-index: 0 !important;
 }
