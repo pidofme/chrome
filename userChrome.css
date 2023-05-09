@@ -3,10 +3,6 @@
   overflow: hidden;
   transition: height .3s .3s !important;
 }
-#main-window[titlepreface*="[Sidebery]"] #TabsToolbar {
-  min-height: 0px !important;
-  height: 0 !important;
-}
-#main-window[titlepreface*="[Sidebery]"] #tabbrowser-tabs {
-  z-index: 0 !important;
+#main-window[titlepreface*="[Sidebery]"] #titlebar {
+  display: none;
 }
